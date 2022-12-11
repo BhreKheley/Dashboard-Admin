@@ -23,8 +23,8 @@
                 
                     @foreach ($tikets as $tiket)
                         <tr>
-                            <td>{{ $tiket->judul }}</td>
-                            <td>{{ $tiket->studio }}</td>
+                            <td>{{ $tiket->film->judul }}</td>
+                            <td>{{ $tiket->film->studio }}</td>
                             <td>{{ $tiket->kursi }}</td>
                             <td>{{ $tiket->jam_tayang }}</td>
                             <td>{{ $tiket->tanggal }}</td>

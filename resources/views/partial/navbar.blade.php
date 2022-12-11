@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/home">Home</a>
+              <a class="nav-link" aria-current="page" href="http://127.0.0.1:8000/home">Home</a>
             </li>
             <li class="nav-item mx-2">
               <a class="nav-link" href="http://127.0.0.1:8000/about">About</a>

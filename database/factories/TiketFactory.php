@@ -17,7 +17,10 @@ class TiketFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'film_id' => mt_rand(1, 5),
+            'kursi'=>mt_rand(1, 10),
+            'jam_tayang'=>fake()->time(),
+            'tanggal' => fake()->date()
         ];
     }
 }
