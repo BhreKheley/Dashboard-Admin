@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('tikets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('film_id');
-            $table->string('judul');
-            $table->integer('studio');
             $table->integer('kursi');
             $table->time('jam_tayang');
             $table->date('tanggal');

@@ -20,7 +20,7 @@ class FilmFactory extends Factory
             //
             'film_id' => mt_rand(1, 5),
             'judul' => fake()->sentence(1),
-            'studio' => fake()->randomFloat(1, 2, 3, 4, 5),
+            'studio' => mt_rand(1, 6),
             'harga' => fake()->randomFloat(25000, 30000, 35000),
         ];
     }

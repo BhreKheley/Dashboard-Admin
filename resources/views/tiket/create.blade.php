@@ -9,17 +9,13 @@
                         <h3 align="center">Beli Tiket</h3>
                         <form action="/tiket/add" method="POST">
                             @csrf
-                            <div class="form-group mb-3">
-                                <label for="exampleInputKursi">Film_ID</label>
-                                <input required type="number" class="form-control" value="{{ old('merk')}}" id="exampleInputPassword1" placeholder="Masukkan ID Film" name="film_id">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="exampleInputName">Judul FIlm</label>
-                                <input required type="name" value="{{ old('nama')}}" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Masukkan Judul Film" name="judul">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="exampleInputKursi">Studio</label>
-                                <input required type="text" class="form-control" value="{{ old('merk')}}" id="exampleInputPassword1" placeholder="Masukkan Nomor Studio" name="studio">
+                            <div class="mb-3">
+                                <label for="publisher" class="form-label">Judul Film</label>
+                                <select class="form-select" name="film_id" id="">
+                                    @foreach ($film as $item)
+                                        <option name="film_id" value="{{ $item->id }}">{{ $item->judul }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="exampleInputKursi">Kursi</label>

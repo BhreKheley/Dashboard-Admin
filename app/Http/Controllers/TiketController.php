@@ -23,15 +23,13 @@ class TiketController extends Controller
 
     public function create(){
         return view('tiket.create', [
-            'films' => film::all()
+            'film' => film::all()
         ]);
     }
 
     public function store(Request $request){
         $validateDate = $request->validate([
             'film_id' => 'required',
-            'judul' => 'required|max:255',
-            'studio' => 'required|max:255',
             'kursi' => 'required',
             'jam_tayang' => 'required',
             'tanggal' => 'required',
@@ -44,14 +42,13 @@ class TiketController extends Controller
     public function edit(tiket $tiket){
         return view('tiket.edit', [
             'tiket' => $tiket,
-            'films' => film::all()
+            'film' => film::all()
         ]);
     }
 
     public function update(Request $request, tiket $tiket){
         $validateDate = $request->validate([
-            'judul' => 'required|max:255',
-            'studio' => 'required|max:255',
+            'film_id' => 'required',
             'kursi' => 'required',
             'jam_tayang' => 'required',
             'tanggal' => 'required',
